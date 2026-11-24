@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Client Previews — The Dr. Ardis Show</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy:   #0A1628;
+    --blue:   #2B7FA6;
+    --blue-lt:#3A9AC5;
+    --ink:    #E8EDF2;
+    --muted:  #8A9BB0;
+    --border: rgba(255,255,255,0.08);
+    --card-bg:#111E30;
+    --radius: 10px;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    background: var(--navy);
+    color: var(--ink);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ── Header ── */
+  header {
+    padding: 32px 24px 28px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .wordmark {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .wordmark-brand {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--blue-lt);
+  }
+
+  .wordmark-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -0.01em;
+  }
+
+  .header-divider {
+    width: 1px;
+    height: 36px;
+    background: var(--border);
+    display: none;
+  }
+
+  /* ── Main ── */
+  main {
+    flex: 1;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 20px;
+  }
+
+  /* ── Preview Grid ── */
+  .previews {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+  }
+
+  .preview-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s;
+  }
+
+  .preview-card:hover {
+    border-color: var(--blue);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    text-decoration: none;
+  }
+
+  .card-thumb {
+    height: 120px;
+    background: linear-gradient(135deg, #0e2a40 0%, #1a4a6b 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    flex-shrink: 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .card-body {
+    padding: 18px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+  }
+
+  .card-tag {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--blue-lt);
+  }
+
+  .card-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.35;
+  }
+
+  .card-desc {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.5;
+    margin-top: 2px;
+  }
+
+  .card-cta {
+    margin-top: auto;
+    padding-top: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--blue-lt);
+  }
+
+  .card-cta svg {
+    flex-shrink: 0;
+    transition: transform 0.15s;
+  }
+
+  .preview-card:hover .card-cta svg {
+    transform: translateX(3px);
+  }
+
+  /* ── Footer ── */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 20px 24px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--ink); }
+
+  /* ── Responsive ── */
+  @media (min-width: 600px) {
+    .header-divider { display: block; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wordmark">
+    <span class="wordmark-brand">The Dr. Ardis Show</span>
+    <span class="wordmark-title">Client Previews</span>
+  </div>
+</header>
+
+<main>
+  <p class="section-label">Available previews</p>
+
+  <div class="previews">
+
+    <a class="preview-card" href="previews/hydrate-retail-displays-3d.html" target="_blank">
+      <div class="card-thumb">🏪</div>
+      <div class="card-body">
+        <span class="card-tag">Retail</span>
+        <span class="card-title">Hydrate Complete Retail Displays</span>
+        <span class="card-desc">3D-rendered point-of-sale display concepts for retail shelf placement.</span>
+        <span class="card-cta">
+          Open preview
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.5 7h9M7.5 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </div>
+    </a>
+
+  </div>
+</main>
+
+<footer>
+  <p>Prepared by <a href="https://banditmediagroup.com" target="_blank">Bandit Media Group</a> &nbsp;&middot;&nbsp; Confidential client preview</p>
+</footer>
+
+</body>
+</html>
