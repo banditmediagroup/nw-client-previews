@@ -2,7 +2,7 @@
 
 Static preview portal for The Dr. Ardis Show client deliverables.
 
-Hosted via GitHub Pages at: `https://atticuseby.github.io/das-client-previews/`
+Hosted via GitHub Pages at: `https://banditmediagroup.github.io/nw-client-previews/`
 
 ## Adding a preview
 
